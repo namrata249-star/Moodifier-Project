@@ -1,0 +1,21 @@
+// Project-level build.gradle (at the root of your project)
+buildscript {
+    repositories {
+        google()  // Add Google's Maven repository
+        jcenter() // Optional: legacy repository, can still be used for older dependencies
+        mavenCentral() // Add Maven Central repository for newer dependencies
+    }
+
+    dependencies {
+        // Updated to a more recent version of the Android Gradle Plugin
+        classpath "com.android.tools.build:gradle:8.7.1" // You can use 4.0.x or later
+    }
+}
+
+allprojects {
+    repositories {
+        google()  // Ensure this is included to fetch the Android Gradle Plugin
+        jcenter() // Optional: can be kept for legacy support
+        mavenCentral() // Add Maven Central as a fallback for newer dependencies
+    }
+}
